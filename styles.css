@@ -1,0 +1,170 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* font-family: 'Montserrat', sans-serif;
+    font-family: 'Fraunces', serif; */
+    user-select: none;
+}
+
+body {
+    background-color: #F2EAE2;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 700px;
+    background-color: white;
+    display: flex;
+    border-radius: 12px;
+}
+
+.imageContainer, .textContainer {
+    width: 50%;
+    height: auto;
+}
+
+.imageContainer > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 12px;
+    border-bottom-left-radius: 12px;
+}
+
+.textContainer {
+    padding: 35px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.textContainer > p:nth-child(1) {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #6C7289;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.textContainer > h1 {
+    font-family: 'Fraunces', serif;
+    font-size: 45px;
+    line-height: 45px;
+}
+
+.description {
+    color: #6C7289;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 28px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.price {
+    font-weight: bold;
+    color: #3D8168;
+    font-size: 50px;
+    font-family: 'Fraunces', serif;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.price::after {
+    content: '$169.99';
+    color: #6C7289;
+    font-size: 25px;
+    font-weight: normal;
+    text-decoration: line-through;
+}
+
+.textContainer > button {
+    width: 100%;
+    height: 58px;
+    background-color: #3D8168;
+    border: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+.textContainer > button > p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+.textContainer > button > img {
+    width: 20px;
+    height: 20px;
+}
+
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 100%;
+    }
+
+    .textContainer {
+        padding: 25px 20px;
+    }
+
+    .textContainer > p:nth-child(1) {
+        font-size: 14px;
+    }
+    
+    .textContainer > h1 {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    
+    .description {
+        line-height: 19px;
+        font-size: 17px;
+    }
+    
+    .price {
+        font-size: 30px;
+        gap: 20px;
+    }
+    
+    .price::after {
+        font-size: 15px;
+    }
+    
+    .textContainer > button > p {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .price {
+        font-size: 40px;
+        gap: 15px;
+    }
+
+    .price::after {
+        font-size: 20px;
+    }
+
+    .container {
+        flex-direction: column;
+        width: 95%;
+        height: 95%;
+    }
+    .imageContainer, .textContainer {
+        width: 100%;
+        height: 50%;
+    }
+    .imageContainer > img {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        border-bottom-left-radius: 0px;
+    }
+}
